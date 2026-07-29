@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Conecta Seguro - Apoio ao Estudante</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="accessibility-bar">
+    <button id="btn-contrast" title="Alternar Modo Escuro"><i class="fas fa-moon"></i> Modo Escuro</button>
+    <button id="btn-font-increase" title="Aumentar Fonte">A+</button>
+    <button id="btn-font-decrease" title="Diminuir Fonte">A-</button>
+  </div>
+
+  <header>
+    <div class="logo">
+      <i class="fas fa-shield-halved"></i>
+      <span>ConectaSeguro</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#escuta">Portal de Escuta</a></li>
+        <li><a href="#quiz">Quiz Interativo</a></li>
+        <li><a href="#referencias">Referências</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero-section">
+      <div class="hero-content">
+        <h1>Portal de Apoio ao Estudante</h1>
+        <p class="hero-subtitle">Bem-vindo ao Portal ConectaSeguro. Aqui você encontrará informações, orientações e acolhimento para navegar na internet de forma segura, consciente e respeitosa.</p>
+        <a href="#escuta" class="btn-primary">Precisa conversar? Acesse a Escuta</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="Estudantes reunidos usando tecnologia de forma saudável">
+      </div>
+    </section>
+
+    <section class="info-cards">
+      <h2>Respeito e Empatia Digital</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <i class="fas fa-heart"></i>
+          <h3>Empatia na Rede</h3>
+          <p>Lembre-se de que do outro lado da tela há uma pessoa real com sentimentos. Trate os outros como gostaria de ser tratado.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-user-shield"></i>
+          <h3>Proteja Seus Dados</h3>
+          <p>Não compartilhe senhas, fotos íntimas ou dados pessoais. Sua privacidade é o seu maior escudo online.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-hand-holding-hand"></i>
+          <h3>Não Seja Cumplice</h3>
+          <p>Viu uma situação de cyberbullying? Não compartilhe, não curta e apoie quem está sendo prejudicado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="escuta" class="section-container">
+      <h2>Portal de Escuta</h2>
+      <p class="section-desc">Este é um espaço seguro e anônimo para você desabafar ou relatar uma situação embaraçosa. *(Nota: Este formulário é apenas uma simulação interativa. Nenhum dado é salvo).*</p>
+
+      <div class="escuta-wrapper">
+        <form id="form-escuta" class="escuta-form">
+          <div class="form-group">
+            <label for="nome-aluno">Como gostaria de ser chamado(a)? (Opcional)</label>
+            <input type="text" id="nome-aluno" placeholder="Ex: Amigo, Anônimo...">
+          </div>
+          <div class="form-group">
+            <label for="desabafo">Escreva aqui o seu desabafo ou dúvida:</label>
+            <textarea id="desabafo" rows="5" placeholder="Sinta-se à vontade para escrever..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Enviar Desabafo</button>
+        </form>
+
+        <div id="resposta-acolhimento" class="resposta-box hidden">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p id="mensagem-resposta"></p>
+          <div class="orientacoes">
+            <h4><i class="fas fa-compass"></i> O que fazer se você precisar de ajuda real?</h4>
+            <ul>
+              <li>Fale com um **professor**, **pedagogo** ou **diretor** na sua escola. Eles estão preparados para ajudar.</li>
+              <li>Converse com seus **pais**, **responsáveis** ou outro adulto de sua confiança.</li>
+              <li>Em casos de violência ou agressão virtual, você pode procurar a **SaferNet Brasil** ou discar **100** (Disque Direitos Humanos).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section-container bg-alt">
+      <h2>Quiz Interativo: Teste Seus Conhecimentos</h2>
+      <p class="section-desc">Responda às 5 perguntas abaixo e descubra se você sabe como agir com segurança e respeito na web!</p>
+
+      <div id="quiz-container" class="quiz-box">
+        </div>
+      <div id="quiz-resultado" class="quiz-resultado hidden">
+        <h3>Resultado do Quiz</h3>
+        <p id="placar-final"></p>
+        <button id="btn-reiniciar-quiz" class="btn-primary">Tentar Novamente</button>
+      </div>
+    </section>
+
+    <section id="referencias" class="section-container">
+      <h2>Referências e Fontes Confiáveis</h2>
+      <p class="section-desc">A informação correta é nossa maior aliada. Confira abaixo os portais oficiais consultados:</p>
+      
+      <ul class="referencias-list">
+        <li>
+          <i class="fas fa-link"></i>
+          <div>
+            <strong>SaferNet Brasil</strong>
+            <p>Plataforma de orientação sobre segurança na internet e combate a crimes virtuais.</p>
+            <a href="https://new.safernet.org.br" target="_blank" rel="noopener noreferrer">Acessar SaferNet</a>
+          </div>
+        </li>
+        <li>
+          <i class="fas fa-link"></i>
+          <div>
+            <strong>Ministério da Educação (MEC) - Cartilha de Combate ao Bullying</strong>
+            <p>Guias educativos de orientação para a comunidade escolar e famílias.</p>
+            <a href="https://www.gov.br/mec" target="_blank" rel="noopener noreferrer">Acessar Ministério da Educação</a>
+          </div>
+        </li>
+        <li>
+          <i class="fas fa-link"></i>
+          <div>
+            <strong>UNICEF Brasil - Internet Sem Vacilo</strong>
+            <p>Campanhas e materiais sobre direitos das crianças e adolescentes no ambiente virtual.</p>
+            <a href="https://www.unicef.org/brazil" target="_blank" rel="noopener noreferrer">Acessar UNICEF Brasil</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <button id="btn-top" title="Voltar ao Topo"><i class="fas fa-arrow-up"></i></button>
+
+  <footer>
+    <p>&copy; 2026 Portal ConectaSeguro - Projeto de Apoio ao Estudante. Desenvolvido para fins educativos.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
